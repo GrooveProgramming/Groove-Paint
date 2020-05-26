@@ -1,2 +1,2 @@
-# Grove-paint-
-A paint editor for Grove Programming 
+# Groove-Paint
+A paint editor for GrooveProgramming 
