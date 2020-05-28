@@ -43,5 +43,26 @@ function draw(e) {
 
   ctx.stroke(); 
 }
-if ($(this).mousedown() == true)  ctx.stroke(); 
-} {
+$(function ()
+{
+    var MouseDown = false;
+    $('.mouseDownOnOut').mouseout(function ()
+    {
+        if (MouseDown)
+        {
+            alert('mouse was down when it left');
+        }
+        else
+        {
+            alert('mouse wasn\'t down when it left');   
+        }
+    });
+    $('.mouseDownOnOut').mousedown(function ()
+    {
+        MouseDown = true;
+    });
+    $('.mouseDownOnOut').mouseup(function ()
+    {
+        MouseDown = false;
+    });
+});
