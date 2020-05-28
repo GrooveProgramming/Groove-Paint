@@ -43,3 +43,5 @@ function draw(e) {
 
   ctx.stroke(); 
 }
+if ($(this).mousedown() == true)  ctx.stroke(); 
+} {
