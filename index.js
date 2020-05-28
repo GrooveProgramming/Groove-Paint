@@ -29,10 +29,11 @@ function draw(e) {
   if (e.buttons !== 1) return; 
 
   var color = document.getElementById("hex").value;
+  var width = document.getElementById("pen_width").value;
 
   ctx.beginPath(); // begin the drawing path
 
-  ctx.lineWidth = 20;
+  ctx.lineWidth = width;
   ctx.lineCap = "round"; 
   ctx.strokeStyle = color;
 

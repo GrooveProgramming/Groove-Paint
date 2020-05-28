@@ -1,16 +1,26 @@
 <html lang="en">
-
-  <head>
-      <meta charset="utf-8">
-      <title>
-          GrooveProgramming - Paint
-      </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-
-  <input id="hex" placeholder="enter hex color"></input>
-  <canvas id="draw"></canvas>
-
-  <script src="index.js"></script>
-
-  </html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			GrooveProgramming - Paint
+		</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	
+	<body>
+		<canvas id="draw"></canvas>
+		<script src="index.js"></script>
+		
+		<div class="paint_options">
+		
+			Colour:
+			<input id="hex" value="#1e272e"></input>
+			
+			&emsp;
+			
+			Width: 
+			<input id="pen_width" name="pen_width" min="1" max="50" value="20" >
+		</div>
+	</body>
+</html>
