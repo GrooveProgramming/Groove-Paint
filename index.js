@@ -43,3 +43,26 @@ function draw(e) {
 
   ctx.stroke(); 
 }
+var canvasRef = document.getElementById('myCanvas');
+var ctx = canvasRef.getContext("2d");
+
+// Make our in-memory canvas
+var inMemCanvas = document.createElement('canvas');
+var inMemCtx = inMemCanvas.getContext('2d');
+
+
+if (ctx) {
+    ctx.fillStyle = "rgb(200,0,0)";
+    ctx.fillRect(10, 10, 55, 50);
+
+};
+
+function resizeCanvas() {
+    inMemCanvas.width = canvasRef.width;
+    inMemCanvas.height = canvasRef.height;
+    inMemCtx.drawImage(canvasRef, 0, 0);
+    canvasRef.width = 1000;
+    ctx.drawImage(inMemCanvas, 0, 0);
+}
+
+document.getElementById('btn1').addEventListener('click', resizeCanvas, false);
