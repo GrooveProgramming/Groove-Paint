@@ -1,0 +1,20 @@
+body {
+	background-color: #4bcffa;
+	margin: 0px;
+}
+canvas{
+	position: fixed;
+	z-index: -1;
+	clear: both;
+}
+.paint_options{
+	padding: 10px;
+	
+	color: #1e272e;
+	
+	background-color: #ffc048;
+	
+	border-bottom-style: solid;
+	border-bottom-color: #ffa801;
+	border-bottom-width: 10px;
+}
