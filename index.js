@@ -13,12 +13,16 @@ function resize() {
 // add event listeners to specify when functions should be triggered
 window.addEventListener("resize", resize);
 document.addEventListener("mousemove", draw);
-document.addEventListener("mousedown", setPosition);
-document.addEventListener("mousedown", draw);
+document.addEventListener("mousedown", mouseDown);
 document.addEventListener("mouseenter", setPosition);
 
 // last known position
 var pos = { x: 0, y: 0 };
+
+function mouseDown(e){
+	setPosition(e);
+	draw(e);
+}
 
 // new position from mouse events
 function setPosition(e) {
