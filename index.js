@@ -23,11 +23,11 @@ function mouseDown(e){
 	setPosition(e);
 	
 	
-	var color = document.getElementById("hex").value;
+	var colour = document.getElementById("hex").value;
 	var width = document.getElementById("pen_width").value;
 	ctx.beginPath();
 	ctx.arc(pos.x, pos.y, width/2, 0, 2 * Math.PI);
-	//ctx.fillStyle(color);
+	ctx.fillStyle = colour;
 	ctx.fill(); 
 }
 
@@ -40,14 +40,14 @@ function setPosition(e) {
 function draw(e) {
   if (e.buttons !== 1) return; 
 
-  var color = document.getElementById("hex").value;
+  var colour = document.getElementById("hex").value;
   var width = document.getElementById("pen_width").value;
 
   ctx.beginPath(); // begin the drawing path
 
   ctx.lineWidth = width;
   ctx.lineCap = "round"; 
-  ctx.strokeStyle = color;
+  ctx.strokeStyle = colour;
 
   ctx.moveTo(pos.x, pos.y); 
   setPosition(e);
