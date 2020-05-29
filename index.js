@@ -21,7 +21,14 @@ var pos = { x: 0, y: 0 };
 
 function mouseDown(e){
 	setPosition(e);
-	draw(e);
+	
+	
+	var color = document.getElementById("hex").value;
+	var width = document.getElementById("pen_width").value;
+	ctx.beginPath();
+	ctx.arc(pos.x, pos.y, width/2, 0, 2 * Math.PI);
+	//ctx.fillStyle(color);
+	ctx.fill(); 
 }
 
 // new position from mouse events
