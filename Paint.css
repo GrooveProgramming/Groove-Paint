@@ -17,4 +17,7 @@ canvas{
 	border-bottom-style: solid;
 	border-bottom-color: #ffa801;
 	border-bottom-width: 10px;
+	
+	/* Stop annoying blue highliting */
+	user-select: none;
 }
