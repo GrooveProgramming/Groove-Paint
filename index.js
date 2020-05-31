@@ -55,3 +55,8 @@ function draw(e) {
 
   ctx.stroke(); 
 }
+var wrapper = document.getElementById("signature-pad");
+var canvas = wrapper.querySelector("canvas");
+var ratio = Math.max(window.devicePixelRatio || 1, 1);
+canvas.width = canvas.offsetWidth * ratio;
+canvas.height = canvas.offsetHeight * ratio;
