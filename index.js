@@ -55,14 +55,3 @@ function draw(e) {
 
   ctx.stroke(); 
 }
-<canvas id = 'canvas'></canvas>
-<script>
-    var canvas1 = document.getElementById('canvas')
-    console.log('canvas size',canvas1.width, canvas1.height)
-    var ctx = canvas1.getContext('2d')
-    ctx.font = 'Bold 48px Arial'
-    var f = ctx.font
-    canvas1.width = 480
-    var f1 = ctx.font
-    alert(f === f1) //false
-</script>
