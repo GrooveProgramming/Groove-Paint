@@ -55,8 +55,14 @@ function draw(e) {
 
   ctx.stroke(); 
 }
-var wrapper = document.getElementById("signature-pad");
-var canvas = wrapper.querySelector("canvas");
-var ratio = Math.max(window.devicePixelRatio || 1, 1);
-canvas.width = canvas.offsetWidth * ratio;
-canvas.height = canvas.offsetHeight * ratio;
+<canvas id = 'canvas'></canvas>
+<script>
+    var canvas1 = document.getElementById('canvas')
+    console.log('canvas size',canvas1.width, canvas1.height)
+    var ctx = canvas1.getContext('2d')
+    ctx.font = 'Bold 48px Arial'
+    var f = ctx.font
+    canvas1.width = 480
+    var f1 = ctx.font
+    alert(f === f1) //false
+</script>
