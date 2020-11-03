@@ -55,3 +55,8 @@ function draw(e) {
 
   ctx.stroke(); 
 }
+
+function download(){
+    document.getElementById("downloader").download = "image.png";
+    document.getElementById("downloader").href = document.getElementById("canvas").toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream');
+}
