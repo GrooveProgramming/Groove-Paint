@@ -4,17 +4,15 @@
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-  <link rel='stylesheet' href='styles.css' class='css'>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-  <title>Drawing App</title>
+  <titleGroove - Paint editor</title>
 </head>
 <body>
   <div id='container'>
     <div id='tool-bar'>
       <div id='tools'>
-        <span data-name='pencil'> Pencil</span>
-        <span data-name='brush'> Brush</span>
-        <span data-name='eraser'>Eraser</span>
+        <span class='active-tool' data-name='pencil'> Pencil</span>
+        <span data-name='brush'>Brush</span>
+        <span data-name='eraser'> Eraser</span>
       </div>
       <div id='size'>Brush/Eraser size:
         <select>
@@ -25,11 +23,10 @@
           <option value='50'>50px</option>
         </select>
       </div>
-      
       <label>Custom Color</label>
       <input type='color' id='color-picker' value='#cce6ff'></input>
-      <a href='' download='' target='_blank'><button id='save'>SAVE</a></a> 
-      <button id='reset'>CLEAR</a> 
+      <a href='' download='' target='_blank'><button id='save'>save</button></a>
+      <button id='reset'>CLEAR</button>
     </div>
     <canvas id='draw'></canvas>
   </div>
